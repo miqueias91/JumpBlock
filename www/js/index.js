@@ -158,6 +158,7 @@ var app = {
     bindEvents: function() {
         document.addEventListener ("deviceready", this.onDeviceReady, false);
         document.addEventListener ("backbutton", this.backButtonHandler, false); 
+        document.addEventListener("mousedown", this.controle, false);
     },
     // deviceready Event Handler
     //
@@ -169,7 +170,6 @@ var app = {
         canvas.height = ALTURA;
         ctx = canvas.getContext("2d");
         document.body.appendChild(canvas);
-        document.addEventListener("mousedown", app.controle);
         estadoAtual = estados.jogar;
         app.roda();
     },
