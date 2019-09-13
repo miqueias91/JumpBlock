@@ -156,21 +156,22 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener ("deviceready", this.onDeviceReady, false);
-        document.addEventListener ("backbutton", this.backButtonHandler, false); 
-        document.addEventListener("mousedown", this.controle, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
         canvas = document.createElement("canvas");
         canvas.width = LARGURA;
         canvas.height = ALTURA;
         ctx = canvas.getContext("2d");
         document.body.appendChild(canvas);
         estadoAtual = estados.jogar;
+
+        document.addEventListener ("backbutton", this.backButtonHandler, false); 
+        document.addEventListener("mousedown", this.controle, false);
+        document.addEventListener ("deviceready", this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {        
         app.roda();
     },
 
