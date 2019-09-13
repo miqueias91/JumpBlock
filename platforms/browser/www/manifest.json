@@ -1,0 +1,13 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Jump Block",
+  "short_name": "Jump Block",
+  "version": "com.phonegap.jumpblock",
+  "description": "Push sample application that receives push notifications.",
+  "author": "PhoneGap Team",
+  "icons": [],
+  "orientation": "landscape",
+  "start_url": "index.html",
+  "theme_color": "#ee6e73"
+}
